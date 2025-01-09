@@ -1,0 +1,58 @@
+= Intro
+
+Werk #16259: New APIs for plugin development
+https://checkmk.com/werk/16259
+
+Important news regarding Development APIs
+https://forum.checkmk.com/t/important-news-regarding-development-apis/42893
+
+All plugins and the corresponding rulesets and checks are one place now: *cmk/plugins*
+
+Allready migrated plugins https://github.com/Checkmk/checkmk/tree/master/cmk/plugins
+
+But what is about special agents?
+https://github.com/Checkmk/checkmk/tree/master/cmk/special_agents
+
+== APIs
+
+* Server-side calls API
+* Ruleset API
+* Graphing API
+
+==== Overshadow
+
+* What would be the path to overshadow shipped ruleset?
+
+== misc
+
+=== a complete set
+
+* special agent ruleset
+* special agent "caller" in libexec
+* special agent itself, example https://github.com/Checkmk/checkmk/blob/master/cmk/special_agents/agent_bi.py
+* argument thingy
+* check plugin ruleset 
+* check plugin itself
+* metics definition
+* HW/SW inventory plugin
+
+== todo
+
+* understand ruleset vs formspec vs valuespec (is this correct:a ruleset uses valuespecs to render the html elements, valuespecs will be replaced by formspecs ?)
+* does the name of the ruleset file matter? I think not.
+* firefox-esr /opt/omd/versions/2.4.0-2025.01.05.cee/share/doc/check_mk/plugin-api/html/cmk.server_side_calls/index.html
+
+== related
+
+* Check the git repos of Robert Sander and Andreas Doehler
+* https://github.com/Yogibaer75/checkmk_template/tree/cmk24
+* https://github.com/Yogibaer75/Check_MK-Things/tree/master/check%20plugins%202.3/huawei_dorado/cmk_addons_plugins/huawei_dorado
+
+* Migration fuctions of rulesets
+
+https://github.com/Checkmk/checkmk/blob/master/packages/cmk-rulesets/cmk/rulesets/v1/form_specs/_migrations.py
+/omd/versions/default/lib/python3.12/site-packages/cmk/rulesets/v1/form_specs/_migrations.py
+
+== bakery
+
+* Example https://github.com/Yogibaer75/Check_MK-Things/tree/master/check%20plugins%202.3/windows_patch_day

@@ -13,14 +13,11 @@ from cmk.rulesets.v1.form_specs import (
 )
 from cmk.rulesets.v1.rule_specs import SpecialAgent, Topic
 
-# 🤔 how to debug this? this does not work for me:
+# to log to ~/var/log/web.log
 import logging
+
 def _parameter_form() -> Dictionary:
 
-    logger = logging.getLogger(__name__)
-    logger.debug("DEBUG: myfoo ruleset message")
-    logger.error("ERROR: myfoo ruleset message")
-    logger.warning("WARNING: myfoo ruleset message")
     logger.info("INFO: myfoo ruleset message")
 
     return Dictionary(
